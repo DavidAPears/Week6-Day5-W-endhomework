@@ -1,35 +1,24 @@
-package Bedrooms;
 
-import java.util.ArrayList;
 
 public class Hotel {
 
     public String hotelName;
-    protected ArrayList<bedRooms> bedRooms;
-    protected ArrayList<functionRooms> functionRooms;
-    protected ArrayList<guests> guests;
+    protected ArrayList<Bedrooms> bedrooms;
+    protected ArrayList<FunctionRooms> functionRooms;
     private double hotelTill;
 
 
-    public Hotel(String hotelName, ArrayList<bedRooms>, ArrayList<functionRooms>, ArrayList<guests>, double) {
+    public Hotel(String hotelName, ArrayList<Bedrooms>, ArrayList<FunctionRooms>, double) {
         this.hotelName = hotelName;
-        this.bedRooms = new ArrayList<bedRooms>();
-        this.functionRooms = new ArrayList<functionRooms>();
-        this.guests = new ArrayList<guests>();
+        this.bedrooms = new ArrayList<Bedrooms>();
+        this.functionRooms = new ArrayList<FunctionRooms>();
         this.hotelTill = hotelTill;
     }
 
-    public String getHotelName() {
-        return this.hotelName();
-    }
 
-    public int hotelFull() {
-        return this.bedRooms.size();
-    }
+    public String getHotelName() { return hotelName; }
 
-    public int noFunctionRooms() {
-        return this.functionRooms.size();
-    }
 
+    }
 }
 

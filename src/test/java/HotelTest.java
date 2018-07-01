@@ -1,12 +1,13 @@
 import Bedrooms.BedroomOne;
 import Bedrooms.BedroomThree;
 import Bedrooms.BedroomTwo;
-import Bedrooms.Hotel;
 import FunctionRooms.Ballroom;
 import FunctionRooms.ConferenceRoom;
 import FunctionRooms.DiningRoom;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertEquals;
 
@@ -33,22 +34,17 @@ public class HotelTest {
         conferenceRoom = new ConferenceRoom("Conference", "Function", 150.00, 25);
         diningRoom = new DiningRoom("Dining Bedrooms.Room", "Function", 0.00, 100);
         guest = new Guest("Mr James Hendrix", 900.00);
+        guest = new Guest("Ms Janis Joplin", 1000.00);
+        guest = new Guest("Mr Eric Clapton", 550.00);
+        guest = new Guest("Mr Michael Jagger", 500.00);
+        guest = new Guest("Mr Robert Dylan", 300.00);
     }
 
     @Test
-    public void getHotelName(){
+    public void hotelHasName(){
         assertEquals("Hotel California", hotel.getHotelName());
     }
 
 
-    @Test
-    public void hotelFull(){
-        assertEquals(0, hotel.hotelFull());
-    }
-
-    @Test
-    public void noFunctionRooms(){
-        assertEquals(0, hotel.noFunctionRooms());
-    }
 
 }
